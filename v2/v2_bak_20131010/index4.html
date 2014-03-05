@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-touch-fullscreen" content="yes"/>
+<meta name="touch-fullscreen" content="yes"/>
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="icons/apple-touch-icon-114x114-rostersystem.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="icons/apple-touch-icon-72x72-rostersystem.png" />
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="icons/apple-touch-icon-57x57-rostersystem.png" />
+<link rel="shortcut icon" href="icons/apple-touch-icon-rostersystem.png" />
+<link rel="apple-touch-startup-image" href="img/l/startup.png"><!--全屏启动时候的启动画面图像, 尺寸320X460 px-->
+
+<title>Smartone RosterSystem</title>
+<style type="text/css" media="all">
+#initLoading{position:absolute; z-index:99999; background:#fff; opacity:0.98; width:100%; height:100%; line-height:100%; text-align:center; vertical-align:middle; color:#333; font-size:24px;}
+#initLoading span{position:absolute; top:50%; left:50%; margin-left:-70px;}
+
+#body{max-width:100%; width:100%; height:100%; overflow:hidden;}
+#main{ height:100%; width:100%; left:0%; top:0% position:absolute; z-index:0; -webkit-box-shadow: -5px 0px 12px 0px #bbb; box-shadow: -5px 0px 12px 0px #bbb;}
+#leftSlide{background-color:#ddd; height:100%; width:80%; max-width:80%; min-width:320px; left:0%; position:absolute; z-index:0;}
+#leftSlideTeamList{height:100%; width:100%;}
+.animated{-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-ms-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:0.6s;-moz-animation-duration:0.6s;-ms-animation-duration:0.6s;-o-animation-duration:0.6s;animation-duration:0.6s;}
+@-webkit-keyframes sildeLeft {
+    0% {
+		-webkit-transform: translateX(0%); /* Safari and Chrome */
+    }
+	100% {
+		-webkit-transform: translateX(80%); /* Safari and Chrome */
+    }
+}
+
+@-moz-keyframes sildeLeft {
+    0% {
+        -moz-transform: translateX(0%); /* Firefox */
+    }
+	100% {
+		-moz-transform: translateX(80%); /* Firefox */
+    }
+}
+
+@-o-keyframes sildeLeft {
+    0% {
+        -o-transform: translateX(0%); /* Opera */
+    }
+	100% {
+		-o-transform: translateX(80%); /* Opera */
+    }
+}
+
+@keyframes sildeLeft {
+    0% {
+        transform: translateX(0%);
+    }
+	100% {
+		transform: translateX(80%);
+    }
+}
+
+.sildeLeftToRight {
+	-webkit-animation-name: sildeLeft;
+	-webkit-backface-visibility: visible !important;
+	-moz-animation-name: sildeLeft;
+	-moz-backface-visibility: visible !important;
+	-o-animation-name: sildeLeft;
+	-o-backface-visibility: visible !important;
+	animation-name: sildeLeft;
+	backface-visibility: visible !important;
+}
+
+@-webkit-keyframes sildeLeftBack {
+    0% {
+		-webkit-transform: translateX(80%); /* Safari and Chrome */
+    }
+	100% {
+		-webkit-transform: translateX(0%); /* Safari and Chrome */
+    }
+}
+
+@-moz-keyframes sildeLeftBack {
+    0% {
+        -moz-transform: translateX(80%); /* Firefox */
+    }
+	100% {
+		-moz-transform: translateX(0%); /* Firefox */
+    }
+}
+
+@-o-keyframes sildeLeftBack {
+    0% {
+        -o-transform: translateX(80%); /* Opera */
+    }
+	100% {
+		-o-transform: translateX(0%); /* Opera */
+    }
+}
+
+@keyframes sildeLeftBack {
+    0% {
+        transform: translateX(80%);
+    }
+	100% {
+		transform: translateX(0%);
+    }
+}
+
+.sildeLeftToRightBack {
+	-webkit-animation-name: sildeLeftBack;
+	-webkit-backface-visibility: visible !important;
+	-moz-animation-name: sildeLeftBack;
+	-moz-backface-visibility: visible !important;
+	-o-animation-name: sildeLeftBack;
+	-o-backface-visibility: visible !important;
+	animation-name: sildeLeftBack;
+	backface-visibility: visible !important;
+}
+/*.overlay{position:absolute; z-index:9998; background-color:#333; opacity:0.6; width:100%; height:100%;}
+#messageBox{position:fixed; left:50%; top:50%; width:200px; height:100px; z-index:9999; background-color:#fff;}
+.messageBox-head{padding:3px 5px; height:25px; line-height:25px;}
+.messageBox-head-text{}
+.messageBox-head-close{float:right;}
+.messageBox-body{padding:10px 5px;}*/
+</style>
+</head>
+
+<body id="body">
+<div id="initLoading"><span id="initLoading-info">Loading File...</span></div>
+
+<div id="leftSlide">
+	<div id="leftSlideTeamList">
+        <ul>
+            <li>Web Team</li> <li>Web Team</li> <li>Web Team</li> <li>Web Team</li>
+            <li>Web Team</li> <li>Web Team</li> <li>Web Team</li> <li>Web Team</li>
+            <li>Web Team</li> <li>Web Team</li> <li>Web Team</li> <li>Web Team</li>
+            <li>Web Team</li> <li>Web Team</li> <li>Web Team</li> <li>Web Team</li>
+            <li>Web Team</li> <li>Web Team</li> <li>Web Team</li> <li>Web Team</li>
+            <li>Web Team</li> <li>Web Team</li> <li>Web Team</li> <li>Web Team</li>
+            <li>Web Team</li> <li>Web Team</li> <li>Web Team</li> <li>Web Team</li>
+            <li>Web Team</li> <li>Web Team</li> <li>Web Team</li> <li>Web Team</li>
+             
+        </ul>
+    </div>
+</div>
+<div id="main" class="animated">
+    <div id="header">
+    	<button id="showLeftSlide" style="float:left;"> << </button>
+        <span id="selectDate"></span>&nbsp;&nbsp;
+        <select id="teamFilter">
+        </select>
+    </div>
+    <div id="content">
+        <ul id="teamList">
+            
+        </ul>
+    </div>
+    <div id="footer">
+    </div>
+</div>
+    
+<!--<div class="overlay" style="display:none;"></div>
+<div id="messageBox" style="display:none;">
+    <div class="messageBox-head">
+        <span class="messageBox-head-text"></span><input type="image" src="img/close_button.jpg" class="messageBox-head-close" />
+    </div>
+    <div class="messageBox-body">
+    
+    </div>
+</div>-->
+</body>
+<script src="prototype1.7.1.js"></script>
+<!--<script src="effectPlus/scriptaculous.js"></script>--not use-->
+<script src="iscroll.js"></script>
+<script src="ph.js"></script>
+<script src="rs.js"></script>
+<script>
+/*function showMessageBox(content,title){
+	//$$('messageBox-head-text').each(function(e){$(e).update(title);});		
+	$$('messageBox-body').each(function(e){$(e).update(content);});	
+	$$('overlay').each(function(e){$(e).show();});	
+	$('messageBox').show();
+}
+$$('messageBox-head-close').each(function(e){
+	$(e).observe('click',function(){
+		alert('aa');
+		$$('overlay').each(function(e){$(e).hide();});	
+		$('messageBox').hide();
+	})
+});
+showMessageBox('寵物跌幅巨大浪費大力開發了！');
+*/
+window.onload=function(){
+	var w=document.body.clientWidth;
+	//alert(w);
+	$('body').setStyle({'max-width':w+'px'});
+}
+$('showLeftSlide').observe('click',function(){
+	$('main').addClassName('sildeLeftToRight');
+	$('main').removeClassName('sildeLeftToRightBack');
+});
+$('leftSlide').observe('click',function(){
+	$('main').addClassName('sildeLeftToRightBack');
+	$('main').removeClassName('sildeLeftToRight');
+	//alert('aa');
+});
+function includeLinkStyle(url) {
+	var link = document.createElement("link");
+	link.rel = "stylesheet";
+	link.type = "text/css";
+	link.href = url;
+	document.getElementsByTagName("head")[0].appendChild(link);
+}
+function includeScriptFile(url){
+	var script= document.createElement("script");
+	script.src=url;
+	document.getElementsByTagName("head")[0].appendChild(script);
+}
+includeLinkStyle("css.css");
+
+/****browser version**************/
+var Sys = {};
+var ua = navigator.userAgent.toLowerCase();
+var s;
+(s = ua.match(/msie ([\d.]+)/)) ? Sys.ie = s[1] :
+(s = ua.match(/firefox\/([\d.]+)/)) ? Sys.firefox = s[1] :
+(s = ua.match(/chrome\/([\d.]+)/)) ? Sys.chrome = s[1] :
+(s = ua.match(/opera.([\d.]+)/)) ? Sys.opera = s[1] :
+(s = ua.match(/version\/([\d.]+).*safari/)) ? Sys.safari = s[1] : 0;
+function browserSupport(){
+	if(Sys.ie){
+		if(Sys.ie<9.0){
+			var tip='<P><br/>Please note that page no longer supports Internet Explorer versions 7 or 8.<br/>We recommend upgrading to the latest <A href="https://ie.microsoft.com/">Internet Explorer</A>, <A href="https://chrome.google.com">Google Chrome</A>, or <A href="https://mozilla.org/firefox/">Firefox</A>.</P><P>If you are using IE 9 or later, make sure you <A href="http://windows.microsoft.com/en-US/windows7/webpages-look-incorrect-in-Internet-Explorer">turn off "Compatibility View"</A>.</P>'
+			document.getElementById('initLoading').update(tip);
+			return false;
+		} else {
+			return true;	
+		}
+	} else {
+		return true;
+	}
+}
+/****golbal var*****/
+var gMyScroll=[];//iScroll object num array
+var gMyScrollReflectTeam=[];//iScroll reflect team id
+var gMainScroll=null;
+var gTeamListScroll=null;
+
+if(browserSupport()){
+	RS.App.init();	
+}
+function mainScroll(){
+	gMainScroll=new iScroll('content',{
+		hScroll: false, //是否水平滚动
+		vScroll: true, //是否垂直滚动
+		x: 0, //滚动水平初始位置
+		y: 0, //滚动垂直初始位置
+		bounce: true, //是否超过实际位置反弹
+		bounceLock: false, //当内容少于滚动是否可以反弹，这个实际用处不大
+		momentum: true, //动量效果，拖动惯性
+		lockDirection: true,
+		//当水平滚动和垂直滚动同时生效时，当拖动开始是否锁定另一边的拖动
+		useTransform: true, //是否使用CSS形变
+		useTransition: false, //是否使用CSS变换
+		topOffset: 0, //已经滚动的基准值(一般情况用不到)
+		checkDOMChanges: true, //是否自动检测内容变化  	
+	});
+	
+	gTeamListScroll=new iScroll('leftSlideTeamList',{
+		hScroll: false, //是否水平滚动
+		vScroll: true, //是否垂直滚动
+		x: 0, //滚动水平初始位置
+		y: 0, //滚动垂直初始位置
+		bounce: true, //是否超过实际位置反弹
+		bounceLock: false, //当内容少于滚动是否可以反弹，这个实际用处不大
+		momentum: true, //动量效果，拖动惯性
+		lockDirection: true,
+		//当水平滚动和垂直滚动同时生效时，当拖动开始是否锁定另一边的拖动
+		useTransform: true, //是否使用CSS形变
+		useTransition: false, //是否使用CSS变换
+		topOffset: 0, //已经滚动的基准值(一般情况用不到)
+		checkDOMChanges: true, //是否自动检测内容变化  	
+	});
+}
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+/*Use this for high compatibility (iDevice + Android)*/
+document.addEventListener('DOMContentLoaded', function () { setTimeout(mainScroll, 200); }, false);
+
+function showShift(ele){
+	//$(ele).up(0).next(0).setStyle({'display':'block'});	
+	$(ele).up(0).next(1).toggle();
+}
+
+$('teamFilter').observe('change',function(event){
+	$$('ul#teamList > li').each(function(e){
+		$(e).hide();	
+	});
+	var teamidArray=Event.element(event).value.split(',');
+	for(var i=0; i<teamidArray.length; i++){
+		var teamid=teamidArray[i];
+		if(teamid==-1){
+			$$('ul#teamList > li').each(function(e){
+				$(e).show();	
+			});
+			return;
+		}
+		var objSelect=document.getElementById('teamFilter');
+		if($('teamList-'+teamid)==''||$('teamList-'+teamid)==null||$('teamList-'+teamid)=='undefined'){
+			//alert('本月份無id為'+objSelect.options[objSelect.selectedIndex].text +' 的相關信息');
+			alert('本月份無team id為'+teamid +' 的相關信息');
+			continue;	
+		}
+		$('teamList-'+teamid).show();	
+	}
+});
+
+//$('video1').webkitRequestFullScreen();//webkit調用全屏
+/****防止ios在聚焦時自動縮放*******/
+/*$$('input','select','textarea').each(function(e){
+	$(e).observe('focus',function(){
+		var viewportMeta=$$('meta[name="viewport"]')[0];
+		viewportMeta.writeAttribute('content','width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale='+(event.type=='blur'?10:1));
+		console.log('ios focus 2');
+	});
+	$(e).observe('blur',function(){
+		var viewportMeta=$$('meta[name="viewport"]')[0];
+		viewportMeta.writeAttribute('content','width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale='+(event.type=='blur'?10:1));
+		console.log('ios blur 2');
+	})
+});
+*/
+
+</script>
+
+</html>

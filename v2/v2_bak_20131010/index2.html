@@ -1,0 +1,585 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-touch-fullscreen" content="yes"/>
+<title>Smartone RosterSystem</title>
+<script src="prototype1.7.1.js"></script>
+<script src="effectPlus/scriptaculous.js"></script>
+<script src="iscroll.js"></script>
+<script>
+	
+</script>
+<style type="text/css" media="all">
+
+</style>
+</head>
+
+<body id="body">
+<div id="header">
+	ST RosterSystem
+	<select id="teamFilter">
+    	<option value="-1">All Teams</option>
+        <option value="1">Web Team</option>
+        <option value="2">CO Team</option>
+        <option value="3">News Team</option>
+    </select>
+</div>
+<div id="content">
+    <ul id="teamList">
+        <li id="teamList-1">
+        	<table width="100%" border="0" cellpadding="0" cellspacing="0">
+            	<tbody>
+                	<tr>
+                    	<td style="width:100px; border-bottom:1px #ccc solid;" align="right" valign="top"> 
+                        	<div class="memberList">
+                                <div class="dutyDay" style="color:red;">Web Team<br/><a href="tel:3333">3333</a> <a href="tel:5656">5656</a></div>
+                                <div class="dutyStatus"><a href="tel:3323">Hugo</a></div>
+                                <div class="dutyStatus"><a href="tel:3323">Hugo</a></div>
+                                <div class="dutyStatus"><a href="tel:3323">Hugo</a></div>
+                                <div class="dutyStatus"><a href="tel:3323">Hugo</a></div>
+                                <div class="dutyStatus"><a href="tel:3323">Hugo</a></div>
+                                <div class="dutyStatus"><a href="tel:3323">Hugo</a></div>
+                                <div class="dutyStatus"><a href="tel:3323">Hugo</a></div>
+                                <div class="dutyStatus"><a href="tel:3323">Hugo</a></div>
+                                <div class="dutyStatus"><a href="tel:3323">Hugo</a></div>
+                            </div>
+                        </td>
+                        <td valign="top" style="border-bottom:1px #ccc solid;">
+                        	<div id="wrapper1" class="wrapper" style="height:310px;">
+                                <div class="scroller" style="width:480px;">
+                                    <ul class="dutyList">
+                                        <li>
+                                            <span class="dutyDay">Sta<br/>30</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                        </li>
+                                        <li>
+                                            <span class="dutyDay">Sun<br/>30</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                        </li>
+                                        <li style="background-color:#eee;">
+                                            <span class="dutyDay">Mon<br/>30</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                        </li>
+                                        <li>
+                                            <span class="dutyDay">Tus<br/>30</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                        </li>
+                                        <li>
+                                            <span class="dutyDay">Thr<br/>30</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                        </li>
+                                        <li>
+                                            <span class="dutyDay">Fri<br/>30</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                        </li>
+                                        <li>
+                                            <span class="dutyDay">Fri<br/>30</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                        </li>
+                                        <li>
+                                            <span class="dutyDay">Fri<br/>30</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                        </li>
+                                        <li>
+                                            <span class="dutyDay">Fri<br/>30</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                        </li>
+                                        <li>
+                                            <span class="dutyDay">Fri<br/>30</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                        </li>
+                                        <li>
+                                            <span class="dutyDay">Fri<br/>30</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                        </li>
+                                        <li>
+                                            <span class="dutyDay">Fri<br/>30</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td colspan="2" valign="top">
+                        	<div class="shift">
+                            	<div style="text-align:center;">
+                                    <span class="shift-teamName">Web Team</span><br/>
+                                    <span class="shift-teamName" style="float:left; margin-left:10px;"><a href="tel:3333">tel:3333</a> <a href="tel:5656">5656</a></span><button class="button shift-bt" style="float:right; margin-right:10px;" onClick="javascript:showShift(this)">&or;</button>
+                                </div>
+                                <div style="clear:both;"></div>
+                                <ul class="shift-list" style="display:none;">
+                                	<li>O: Odefdd dfdf </li>
+                                    <li>O: Odefdd dfdf </li>
+                                    <li>O: Odefdd dfdf </li>
+                                    <li>O: Odefdd dfdf </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+           	
+        </li>
+    	<li id="teamList-2">
+        	<table width="100%" border="0" cellpadding="0" cellspacing="0">
+            	<tbody>
+                	<tr>
+                    	<td style="width:100px; border-bottom:1px #ccc solid;" align="right" valign="top"> 
+                        	<div class="memberList">
+                                <div class="dutyDay" style="color:red;">CO Team<br/><a href="tel:3333">3333</a> <a href="tel:5656">5656</a></div>
+                                <div class="dutyStatus"><a href="tel:3323">Hugo</a></div>
+                                <div class="dutyStatus"><a href="tel:3323">Hugo</a></div>
+                                <div class="dutyStatus"><a href="tel:3323">Hugo</a></div>
+                                <div class="dutyStatus"><a href="tel:3323">Hugo</a></div>
+                                <div class="dutyStatus"><a href="tel:3323">Hugo</a></div>
+                                <div class="dutyStatus"><a href="tel:3323">Hugo</a></div>
+                                <div class="dutyStatus"><a href="tel:3323">Hugo</a></div>
+                                <div class="dutyStatus"><a href="tel:3323">Hugo</a></div>
+                                <div class="dutyStatus"><a href="tel:3323">Hugo</a></div>
+                            </div>
+                        </td>
+                        <td valign="top" style="border-bottom:1px #ccc solid;">
+                        	<div id="wrapper2" class="wrapper" style="height:310px;">
+                                <div class="scroller" style="width:480px;">
+                                    <ul class="dutyList">
+                                        <li>
+                                            <span class="dutyDay">Sta<br/>30</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                        </li>
+                                        <li>
+                                            <span class="dutyDay">Sun<br/>30</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                        </li>
+                                        <li style="background-color:#eee;">
+                                            <span class="dutyDay">Mon<br/>30</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                        </li>
+                                        <li>
+                                            <span class="dutyDay">Tus<br/>30</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                        </li>
+                                        <li>
+                                            <span class="dutyDay">Thr<br/>30</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                        </li>
+                                        <li>
+                                            <span class="dutyDay">Fri<br/>30</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                        </li>
+                                        <li>
+                                            <span class="dutyDay">Fri<br/>30</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                        </li>
+                                        <li>
+                                            <span class="dutyDay">Fri<br/>30</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                        </li>
+                                        <li>
+                                            <span class="dutyDay">Fri<br/>30</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                        </li>
+                                        <li>
+                                            <span class="dutyDay">Fri<br/>30</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                        </li>
+                                        <li>
+                                            <span class="dutyDay">Fri<br/>30</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                        </li>
+                                        <li>
+                                            <span class="dutyDay">Fri<br/>30</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td colspan="2" valign="top">
+                        	<div class="shift">
+                            	<div style="text-align:center;">
+                                <span class="shift-teamName">CO Team <a href="tel:3333">3333</a> <a href="tel:5656">5656</a></span>
+                                <button class="button shift-bt" onClick="javascript:showShift(this)">&or;</button></div>
+                                <ul class="shift-list" style="display:none;">
+                                	<li>O: Odefdd dfdf </li>
+                                    <li>O: Odefdd dfdf </li>
+                                    <li>O: Odefdd dfdf </li>
+                                    <li>O: Odefdd dfdf </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+           	
+        </li>
+    </ul>
+</div>
+<div id="footer">
+	<a href="?dt=201305"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAFMN540AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
+bWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdp
+bj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6
+eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0
+NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJo
+dHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlw
+dGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAv
+IiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RS
+ZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpD
+cmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNl
+SUQ9InhtcC5paWQ6MThEOEI1RkUwODlDMTFFM0I4MDNBMTVBNjQ4MDU4NTAiIHhtcE1NOkRvY3Vt
+ZW50SUQ9InhtcC5kaWQ6MThEOEI1RkYwODlDMTFFM0I4MDNBMTVBNjQ4MDU4NTAiPiA8eG1wTU06
+RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoxOEQ4QjVGQzA4OUMxMUUzQjgw
+M0ExNUE2NDgwNTg1MCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoxOEQ4QjVGRDA4OUMxMUUz
+QjgwM0ExNUE2NDgwNTg1MCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1w
+bWV0YT4gPD94cGFja2V0IGVuZD0iciI/PmmmsDAAAAWUSURBVHjaYvj//z8DCOtYJ/OAaCYGINC1
+SVHWMRD4DGKDZQPT6/7DVDLAGLp2iWBBgABiBIsiAbAZaeV1cFEmoIE3Xjz7iVACtXJKZmk/2AyA
+AEIxA6hawtlV/rm0lCRDaWoKI0gMrAAo4aSjJ7L32/fvDBvnT2TEsPTykTn7rlx6s+Hly+8MWWX9
+qM6CuRvJy81ArAfjAwQQhgL/mGq4r5mQTSqsm/RfSOIPyD33QXwWmEReVf//15+eMly58OES0C36
+cMkioI6Hzx8w3Lv9dT9QwgmmASx58fpNGL8C2Rp4oFh4pf3n4mBneP3quxdQ93YUSRDQs0/6z8HO
+xvD9259CoIIJGF7RsEiAewUggDDiCxkAvcRva6XxQVaBC+jYLwyz+8tQgpkFhyZFJ3ude3YOsgyf
+v75iuH6bgeH86Xc30NWhx7KJh5vR6dfvnzF8+faNQVhEhOHYwXungO43x2YJLAWYu7von7j76CHD
+j5+QBPXk4XeUMMWpGcnm0wLCLCYgNg8XJ4OirCzD4WPXLICGnCSoGcmQ+WwcDAncgqIMf79/ZDDQ
+VmM4dPRKNNCQZQQ1IxnS/ff/nxIQm5WFheHfXwYroAHHYfIAAYQRj1jS8EYgTsQmx4IvQIA270xN
+tnb79u2vH5DNAbR1OlHOBireFx9n4fju80eGN2/eMfBxiDLs3H1FDGjAa0IBdjgq0tTm5t17DP+A
+8m9f/2R49OCrKVDjGbw2AzWeDQkxMrp19z5Y45tXPxlePPuuDdR4Dd0SFjSNj/z99GRfvPnI8PPX
+X7CNQM1yQI2P8cYzUONrN1dNkbsPH4ND8t3b3wwf3v0SB2p8hTeFATX+sLVVYX/w+BlY488f/xhe
+v/wpANT4EV9swEoX7eu3XjH8/PmX4devfwyikhIgsTMMBACysyU4OJmec3AxMTAxMjKoKcsxnDh5
+9xXQdnFiMwYPKxvjZzYORgYQVFWSYTh/4eEHoAGC+JzNAC17v/z+9Z/rz192oPP/Mly9+ZDB2FxH
+AGjoF1JyFTNQ5g8jE1AOWPAoykky3Lv38g9Qih9owTeicpWOTdL/f///gdnMjCyPgBrl8dYE6FjX
+PvM/MFddxSYHEGB4bSYEgN7jBVKLXRz1/FWUxRhmzNnzF8jPBLpwNtHRTKKFwkBqha21houKqiDD
+k+cvwOWmAD8fAx+nAMP9++8Zjp28WQ5UMxnoiO/YzGAh0UI5ILXIwU7LXkaWh+HJixcMV26+Yfj3
+D+L4b99fM1x9+4zh3p1PwEqC4QQQ/8ZlFguRFioCqWXAqsSCX4ARaOFLhpfv/jK8fw9pvoiKiTBc
+v/qU4enjb1eB3FigL89TFNRACzWB1BpHO20tQWFWYJC+ZPgKbJD8/4fQ8wZY0rx68QNkUSjQwrvE
+hh6uPGENpNa6OumJs3H8Y3j64hUwGH+Ay0IYePfmJxD/OgpkhgAtfEFqOkEvN71AqdTH21zo67f3
+DI9fPGbg5OFjeP8BkpEFRUQZ7t16xvDpw+9tQG4c0MK35OYI5MJLFUjtVJAXVmRk+Q0ssH8xoAcG
+sHpkePn8B6i1FAa09BIDBQBbNSMDpLZzcTPrcHKjFG3gullSXISBm4OH4cjx60+AQsFAB5yiisVI
+DhAFBTuPALc7E8MPsBivkCjDl/dvGDg52RnUNdSBLY3vIAe8gzrgAFUsRi7+gdQsFlaGSBY2RLMP
+xOIANj9lpEQZBPn4Qc0cUG2WCHTAeqpYjOQAUEKcBiz9U5mQkiTIAezA5q20pAiDpKgIw8Gjl0GF
+RgrQAYtoUWROYGFnz//9C1LbcAmIMnz78JqBjY2VQUlVlYGT8TfDhcv3HgGlzHFlNUoriQ5g9VX+
+9x+oCgN2PRiZGJiZmO9B8/Z5qvsYiwP6gBSoQZ0AtPACMXoAV7lASGt+LaUAAAAASUVORK5CYII=
+ " > </a>
+    <span>July 2013</span>
+    <a href="?dt=201307"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAFMN540AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
+bWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdp
+bj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6
+eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0
+NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJo
+dHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlw
+dGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAv
+IiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RS
+ZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpD
+cmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNl
+SUQ9InhtcC5paWQ6MzMzOTJFQ0UwODlDMTFFM0FGNkZBRDk1RDg3MEM3OUYiIHhtcE1NOkRvY3Vt
+ZW50SUQ9InhtcC5kaWQ6MzMzOTJFQ0YwODlDMTFFM0FGNkZBRDk1RDg3MEM3OUYiPiA8eG1wTU06
+RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDozMzM5MkVDQzA4OUMxMUUzQUY2
+RkFEOTVEODcwQzc5RiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDozMzM5MkVDRDA4OUMxMUUz
+QUY2RkFEOTVEODcwQzc5RiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1w
+bWV0YT4gPD94cGFja2V0IGVuZD0iciI/PnREi4oAAAVjSURBVHjaYvz//z8DMmCCMfKbusAyjDAV
+ujYpt0XE+VQYQAI61sm/DZ2z/4PYAAEEE9gIokEYbIaKmogfUMtZsF6YTGB6HUKLhX/Zf5gEQADB
+bantmvH/L/NXhs3rr++/fGSOE8w5jOgOdYso+S8jJ8hw+tj9N0CFokzIkkCL3/9nYWe4duUlA0gS
+xREgrGuf+R+ZD8IAAQRnAP2SiC7JBDVW1D9Ie96cVatQHIMcRlqOripXleVlGfITohkxXA5UIGZi
+qfBSQUaSoT4/mRHDW+E5zf9///nDcPvKUxUWZImMqin/373/wfDi4UteoJe+sECN49I20Pz64Mkr
+hq9v3rIAJf6i+BXolavoXgEIIAZ0AaCizMnzl/1fuG7tfyB7J7o8RjiggdNHTl5huHT9DoOHj4bb
+9KUr/gOddRiLOsxIRAoWWVkFwUey8oIMTIyMDIpy0gyLFx16DPSPHEHNSIbwK6qKfeDm5WAAmsEg
+JyXOsHXz6Z9AQzjwagZqfOnsZiJ298Ezhn9AdR/ffmb4+O6LJFDjC5w2AzV9MTbX4b7/+CUDSPrb
+py8MP79+5wJq+o7Xz0CND9n4BcH++vv9G8OFfVMZcbkMIICwRkFgXC0omnjwRRPWqMos7f3v7qnB
+4OSg+xkUWPgCEz073VdS42d48PgZg6gkK4OLk94HoJgELs3Y/Hzd3UtNA8Tm5uJi+PaRkWHH7vNK
+wMC6T1QiARpwEZix9CAGcDL8/sbCsHP3eRWgAXeJTWEnreyVzMAGcHIyMP9jZ9ix65wp0IAzRKUw
+oAH7gDnXEcTm5GBn4OfkZ9iy7ZQz0IB9xCbPfTpGcmADONhZGaSERRk2bTlhATTgJCGbzTS05E7+
+ZfoLFwMWDzeBGjUwogpNo7mTo9FJRhYmhp8//4ExUOMZmEacmoEaPZ0cjU/cf/aa4f3H7wy/fv1j
+eHT7+QagRlNkdSxYNEY5O5suvXb3KcOPn7/BYu+fv14A1JiIrpYFTWOBk5NZ/4Xrjxh+/PoNKsAY
+vr59NxWoMQebC9FtPnn01HWG/8wsYI2/Pn3oAWosJSV56jGycV78/+t7C1BjLb5oBAgwgvEMNTAV
+SE0vyvVlvnTlIcOe/Zc2AvmxQMM/M5AJ8CVtTiCVa2et3ampKcHw6983hk9fvjCws7ExSIiIMly8
+8JRh74HLe4BqIoAOeEtNi0HxYAXEc/QNpVSlZHgR5QewBOYC5jMJURGGm9dfM+zae+EgUDgO6IBH
+FFuM5ghDILVYXVNMW1YeUaYxMjIxcHFwgB3w8MF7UGY/ARSOwlbkkGUxkgOUgdRqBWVhQzl5ASQH
+MDJwcnIwSAId8OzxR4ade85fAwqHAB1wnSoWIzkAVBKvkZYTsAa1iFAcACypJESFGT69/8mwdfvp
+l0DhYKADjlLFYiQHCAOpReKS/F6SskghAMTs7GwM4iJCDH9/MTBs2XryHTQXbKOKxbC8C6RWqWhK
+qrOyMaP6CgjZ2FgZvn/+xXDzxhNQvLsDLb9NkcWg4hhIrXV0MJT5y/iX4cXr9wx//vxFUfP+zWcQ
+vgJkegItfIK30CTCQgeQhQ72hkL/mRkZnrx8y/D9xy8GZA98fPeZ4cuHrzuhwfuaosQFtDAQSM13
+djLh//LzF8OzF++AhfIvBmTtXz9+AQbrt+VAZhqoOUpRdgJaGAcqRFyczVhff/jK8PzVO4afwFoA
+oe0/w4/PXxl+ff8xG8jJAlr4h9KSC5RlTpqYaMt9/vEHHIe/fv1BaXb9AbbN/vz8ORFoWQHViky0
+UmsNEweXEhMrG7ja+vfzB8O/3z87gRZWUL2SwOIAAyC1AIj3AS0sYqAQAACyQSkFMufRCQAAAABJ
+RU5ErkJggg==
+ " > </a>
+</div>
+
+</body>
+<script>
+function includeLinkStyle(url) {
+	var link = document.createElement("link");
+	link.rel = "stylesheet";
+	link.type = "text/css";
+	link.href = url;
+	document.getElementsByTagName("head")[0].appendChild(link);
+}
+includeLinkStyle("css.css");
+
+	var content;
+	var myScroll1;
+	var myScroll2;
+	function loaded() {
+		content=new iScroll('content',{
+			hScroll: false, //是否水平滚动
+			vScroll: true, //是否垂直滚动
+			x: 0, //滚动水平初始位置
+			y: 0, //滚动垂直初始位置
+			bounce: true, //是否超过实际位置反弹
+			bounceLock: false, //当内容少于滚动是否可以反弹，这个实际用处不大
+			momentum: true, //动量效果，拖动惯性
+			lockDirection: true,
+			//当水平滚动和垂直滚动同时生效时，当拖动开始是否锁定另一边的拖动
+			useTransform: true, //是否使用CSS形变
+			useTransition: false, //是否使用CSS变换
+			topOffset: 0, //已经滚动的基准值(一般情况用不到)
+			checkDOMChanges: true, //是否自动检测内容变化  	
+		});
+		myScroll1 = new iScroll('wrapper1');
+		myScroll2 = new iScroll('wrapper2');
+	}
+	
+	document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+	
+	/* * * * * * * *
+	 *
+	 * Use this for high compatibility (iDevice + Android)
+	 *
+	 */
+	document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 200); }, false);
+	/*
+	 * * * * * * * */	
+	 //document.write('<script>myScroll3="11";alert(myScroll3);<\/script>');
+
+	function showShift(ele){
+		//$(ele).up(0).next(0).setStyle({'display':'block'});	
+		$(ele).up(0).next(1).toggle();
+	}
+	
+	$('teamFilter').observe('change',function(event){
+		var teamid=Event.element(event).value;
+		if(teamid==-1){
+			$$('ul#teamList > li').each(function(e){
+				$(e).show();	
+			});
+			return;
+		}
+		var objSelect=document.getElementById('teamFilter');
+		if($('teamList-'+teamid)==''||$('teamList-'+teamid)==null||$('teamList-'+teamid)=='undefined'){
+			alert('無 '+objSelect.options[objSelect.selectedIndex].text +' 的相關信息');
+			return;	
+		}
+		
+		$$('ul#teamList > li').each(function(e){
+			$(e).hide();	
+		});
+		$('teamList-'+teamid).show();
+	});
+	
+</script>
+</html>

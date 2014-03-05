@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=960, user-scalable=no"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<title>Smartone</title>
+<script src="prototype1.7.1.js"></script>
+<script>
+new Ajax.Request('teams.json', { 
+	method: 'post',
+	onSuccess: function(tran) {
+		alert(tran.responseJSON[0].tid+' '+tran.responseJSON.length);
+	},
+	onFailure: function(tran) {
+		alert('oh! error');	
+	}
+}); 
+
+
+
+/*{
+    “user”:{uid,name,phone,[{day,duty},{day,duty}]},
+    “shift”:[{“phone”:”3333”},{duty,desc},{duty,desc}]
+}*/
+
+var j={
+	"user":[
+			{"uid":"1","name":"ivnace1","phone":"3332","dayduty":[{"day":"2013-07-22","duty":"R"},{"day":"2013-07-23","duty":"RR"}]},
+			{"uid":"2","name":"ivnace2","phone":"3332","dayduty":[{"day":"2013-07-22","duty":"R"},{"day":"2013-07-24","duty":"RR"}]}
+		   ],
+	"team":{"phone":"3333","shift":[{"duty":"R","desc":"R is R"},{"duty":"RR","desc":"RR is RR"}]}
+	};
+
+//alert(j.user.length);
+//alert(j.user[0].uid);
+Date.prototype.getDays=function(){ 
+var _newDate=new Date(); 
+_newDate.setMonth(_newDate.getMonth()+1); 
+_newDate.setDate(0); 
+$_days=_newDate.getDate(); 
+delete _newDate; 
+return $_days; 
+} 
+function showdate(n) 
+{ 
+var uom = new Date(); 
+uom.setDate(uom.getDate()+n); 
+uom = uom.getFullYear() + "-" + (uom.getMonth()+1) + "-" + uom.getDate()+"\n星期"+('天一二三四五六'.charAt(uom.getDay()))+"\n本月有"+ uom.getDays()+"天"; 
+return uom; 
+} 
+
+//window.alert("今天是："+showdate(0)); 
+//window.alert("昨天是："+showdate(-1)); 
+//window.alert("明天是："+showdate(1)); 
+//window.alert("10天前是："+showdate(-10)); 
+//window.alert("5天后是："+showdate(5)); 
+
+//alert(new Date().getDay());
+
+</script>
+</head>
+
+<body>
+<a href="tel:680437" title="tel:680437">打电话给某某</a>
+</body>
+</html>

@@ -1,0 +1,441 @@
+/* CSS Document */
+/********css reset*********/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html,body { 
+	height: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	text-size-adjust:100%;
+	-webkit-user-select:none;
+}
+body { font-size: 62.5%; line-height: 1; font-family: Arial, Tahoma, sans-serif;}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+ol, ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+strong { font-weight: bold; } 
+
+table { border-collapse: collapse; border-spacing: 0; }
+img { border: 0; max-width: 100%; }
+
+p { font-size: 13px; line-height: 20px; color: #333; }
+
+a,input,button,textarea{outline:none;}
+input[type=button]{
+	-webkit-appearance:none;
+}
+
+/*******css reset end************************/
+/* Clear Fix */
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
+.ellipsis{
+	overflow:hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;	
+}
+[class*="button"]:hover {
+background: #f1f1f1;
+}
+[class*="button"] {
+-webkit-border-radius: 2px;
+-moz-border-radius: 2px;
+-o-border-radius: 2px;
+-ms-border-radius: 2px;
+border-radius: 2px;
+background: #f8f8f8;
+border: 1px #999 solid;
+padding: 5px 12px;
+line-height: 18px;
+vertical-align: top;
+letter-spacing: 3px;
+color: #555;
+display: inline-block;
+font-size: 13px;
+font-weight: bold;
+cursor: pointer;
+position: relative;
+-webkit-box-shadow: 0px 1px 2px 0 rgba(255, 255, 255, 0.4) inset;
+-moz-box-shadow: 0px 1px 2px 0 rgba(255, 255, 255, 0.4) inset;
+-o-box-shadow: 0px 1px 2px 0 rgba(255, 255, 255, 0.4) inset;
+-ms-box-shadow: 0px 1px 2px 0 rgba(255, 255, 255, 0.4) inset;
+box-shadow: 0px 1px 2px 0 rgba(255, 255, 255, 0.4) inset;
+}
+
+body,ul,li {
+	padding:0;
+	margin:0;
+	border:0;
+}
+
+body {
+	font-size:12px;
+	font-family:HelveticaNeueLTPro-Md,helvetica;
+}
+/**bubble class begin***/
+.oval-thought-border {
+	position:relative; 
+	padding:5px;
+	left:50%;
+	top:50%;
+	margin-top:-100px;
+	margin-left:-100px;
+	border: 1px solid #e95863; 
+	text-align:center;
+	color:#333; 
+	background:#fff;
+	/* css3 */
+	/*
+	NOTES:
+	-webkit-border-radius:240px 140px; // produces oval in safari 4 and chrome 4
+	-webkit-border-radius:240px / 140px; // produces oval in chrome 4 (again!) but not supported in safari 4
+	Not correct application of the current spec, therefore, using longhand to avoid future problems with webkit corrects this
+	*/
+	
+	-webkit-border-top-left-radius:240px 140px;
+	-webkit-border-top-right-radius:240px 140px;
+	-webkit-border-bottom-right-radius:240px 140px;
+	-webkit-border-bottom-left-radius:240px 140px;
+	-moz-border-radius:240px / 140px;
+	border-radius:10px;
+	width:200px;
+	box-shadow: 3px 3px 6px 0px #999;
+	-webkit-box-shadow: 3px 3px 6px 0px #999;
+}
+
+/* creates the larger circle */
+.oval-thought-border:before {
+	content:""; 
+	position:absolute; 
+	z-index:10; 
+	bottom:-10px; 
+	left:30px; 
+	border-color: #e95863 transparent transparent transparent;
+    border-style: solid;
+    border-width: 10px 10px 0px 10px;
+    /* reduce the damage in FF3.0 */
+    display:block; 
+}
+
+/* creates the smaller circle */
+.oval-thought-border:after {
+	content:""; 
+	position:absolute; 
+	z-index:11; 
+	bottom:-9px; 
+	left:31px; 
+	border-color: #fff transparent transparent transparent;
+    border-style: solid;
+    border-width: 9px 9px 0px 9px;
+    /* reduce the damage in FF3.0 */
+    display:block; 
+}
+/**bubble class end***/
+
+#header {
+	position:absolute; z-index:2;
+	top:0; left:0;
+	width:100%;
+	height:45px;
+	line-height:45px;
+	background-color:#666666;
+	padding:0;
+	color:#fff;
+	font-size:20px;
+	text-align:center;
+	-webkit-box-shadow: 0px 1px 1px 0px #ccc;
+	-moz-box-shadow: 0px 1px 1px 0px #ccc;
+	-o-box-shadow: 0px 1px 1px 0px #ccc;
+	-ms-box-shadow: 0px 1px 1px 0px #ccc;
+	box-shadow: 0px 1px 1px 0px #ccc;
+	border-bottom: 1px #707070 solid;
+}
+
+#footer {
+	position:absolute; z-index:2;
+	bottom:0; left:0;
+	width:100%;
+	height:45px;
+	background-color:#ffffff;
+	padding:0;
+	border-top:1px solid #eee;
+	text-align:center;
+	line-height:45px;
+	font-size:22px;
+	color:#444;
+	-webkit-box-shadow: 0px 1px 1px 0px #f6f6f6 inset;
+	box-shadow: 0px 1px 1px 0px #f6f6f6 inset;
+}
+#teamShiftList{
+	position:absolute;
+	top:45px;
+	left:0px;
+	display:block;
+	z-index:2;
+	height:100%;
+	width:100%;
+	background:rgba(51, 51, 51, 0.9);
+}
+
+#content {
+	position:absolute; z-index:1;
+	top:45px; bottom:45px; left:0;
+	width:100%;
+	background:#fff;
+	overflow:auto;
+}
+#shiftBubbleOverlay{
+	background:rgba(51, 51, 51, 0.77);
+	width:100%;
+	height:100%;
+	line-height:100%;
+	position:absolute;
+	z-index:5;
+}
+
+#body{max-width:100%; width:100%; height:100%; overflow:hidden;}
+#main{ height:100%; width:100%; left:0%; top:0% position:absolute; z-index:0; -webkit-box-shadow: -5px 0px 12px 0px #bbb; box-shadow: -5px 0px 12px 0px #bbb;}
+#leftSlide{background-color:#ddd; height:100%; width:80%; max-width:80%; min-width:320px; left:0%; position:absolute;}
+#leftSlideTeamList{height:100%; width:100%;}
+#leftSlideTeamList li{
+	width:100%;
+	height:40px;
+	border-bottom:1px #ccc solid;
+	font-size:16px;
+	line-height:40px;
+	padding-left:20px;
+	
+}
+#leftSlideTeamList li a{
+	text-decoration:none;
+	display:block;
+	color:#444;	
+}
+#leftSlideTeamList li:hover{
+	background-color:#ccc;
+}
+
+
+#teamFilter{}
+.teamNavBt,#footer a{display:inline-block; color:#fff; height:45px; width:45px; text-align:center; text-decoration:none; overflow:hidden;}
+#currentTeamBox,.currentDateBox{display:inline-block; font-size:22px; height:45px; overflow:hidden; vertical-align: top; text-overflow: ellipsis; white-space: nowrap;}
+.currentDateBox{}
+@media only screen and (min-width:320px){
+	#currentTeamBox{width:220px;}
+	.currentDateBox{width:175px;}
+}
+@media only screen and (min-width:480px){
+	#currentTeamBox{width:380px;}
+	.currentDateBox{width:340px;}	
+}
+@media only screen and (min-width:640px){
+	#currentTeamBox{width:540px;}
+	.currentDateBox{width:500px;}	
+}
+@media only screen and (min-width:800px){
+	#currentTeamBox{width:700px;}
+	.currentDateBox{width:660px;}	
+}
+@media only screen and (min-width:1024px){
+	#currentTeamBox{width:924px;}
+	.currentDateBox{width:884px;}	
+}
+
+#footer a {
+	color:#333;
+	text-decoration:none;
+	line-height:45px;
+	font-size:22px;
+}
+.lastTeamBt{background:url(img/arrow_l_wihte.png) no-repeat center center;}
+.nextTeamBt{background:url(img/arrow_r_wihte.png) no-repeat center center;}
+.lastDateBt{background:url(img/arrow_l_grey.png) no-repeat center center;}
+.nextDateBt{background:url(img/arrow_r_grey.png) no-repeat center center;}
+
+
+ul#teamList{list-style:none; width:100%; padding-bottom:5px;}
+#teamList li{padding:0px; margin:10px 0px; border-bottom:1px solid #ccc; border-top:1px solid #ccc; background-color:#eee; font-size:14px; display:block;}
+
+#teamList .wrapper{width:100%; position:relative;}
+
+#teamList .scroller {
+	position:absolute; z-index:1;
+	/*-webkit-touch-callout:none;*/
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	width:100%;
+	padding:0;
+	height:100%;
+	float:left;
+}
+
+#teamList .scroller ul {
+	list-style:none;
+	padding:0;
+	margin:0;
+	width:100%;
+	height:100%; 
+	display:block;
+	text-align:left;
+}
+
+#teamList .wrapper .scroller li {
+	display:block;
+	vertical-align:middle;
+	float:left;
+	padding:0px;
+	width:60px;
+	height:100%;
+	border:none;
+	margin:0px;
+	padding:0px;
+	border-right:1px solid #ccc;
+	background-color:#fff;
+	font-size:14px;
+}
+
+.dutyStatus{
+	display:block;
+	width:100%;
+	text-align:center;
+	height:50px;
+	line-height:50px;
+	overflow:hidden;
+	color:#666;
+	font-family:HelveticaNeueLTPro-Md,helvetica;
+}
+.dutyStatus-text{
+	background-color: none;
+	width: 34px;
+	height: 34px;
+	line-height: 34px;
+	margin: 3px 0px;
+	display: inline-block;
+	border-radius: 100px;
+	color:#fff;
+}
+.dutyStatus-color1{
+	background-color: #d3aa38;	
+}
+.dutyStatus-color2{
+	background-color: #9e98d4;	
+}
+.dutyStatus-color3{
+	background-color: #d69899;
+	background-color: #f8dcdc;	
+	background-color: #f99;	
+	background-color: #d39893;	
+}
+.dutyStatus-color4{
+	background-color: #d2a681;	
+}
+.dutyStatus-color5{
+	background-color: #80d1d4;
+	background-color: #c5ebec;	
+	background-color: #f96;	
+	background-color: #31b4b4;	
+}
+.dutyStatus-color6{
+	color:#000;
+}
+
+.dutyDay{
+	display:block;
+	width:100%;
+	text-align:center;
+	height:38px;
+	padding:5px 0px 0px 0px;
+	overflow:hidden;
+	color:#444;
+	font-weight:bold;
+}
+.memberListBox{width:100px;border-right: 1px #bbb solid;  background-color: #fff;}
+.memberList{}
+.memberList a{color:#666; text-decoration:none;}
+.memberList a:hover{color:red;}
+.memberList .dutyStatus a{display:block;}
+
+.shift{background:#fff; padding:10px 0px 0px 0px;}
+.shift-bt{
+	width: 45px;
+	height: 45px;
+	display:inline-block;
+	margin-right: 0px;
+	border:0px #ccc solid;
+	background:none;
+	background:url(img/arrow_of_wihte.png) no-repeat center center;
+	background:url(img/btn_info.png) no-repeat center center;
+	cursor:pointer;
+	/*vertical-align: top;*/
+}
+.shift-bt-on{
+	background:url(img/arrow_on_wihte.png) no-repeat center center;
+	background:url(img/btn_info.png) no-repeat center center;
+}
+#shiftListBt{float:right; margin-right:5px;}
+#teamListBt{float:left; margin-left:5px; background:url(img/btn_menu.png) no-repeat center center;}
+
+#footer a#btn_today{width:50px; display:inline-block; height:100%; background:url(img/btn_today.png) no-repeat center center; float:left; margin-left:5px;}
+
+#shiftListBox{
+	width:100%;	
+}
+.shift-list{background-color:none; color:#fff;}
+.shift-list td{border:0px; padding:5px 10px; margin:0px; background-color:none; border-bottom: 1px #909090 solid; height:35px;}
+
+.shift-teamName,.shift-teamTel{font-size:22px; font-weight:bold; color:#444; line-height:34px; display:inline-block;}
+.shift-teamTel{color:#555; font-weight:lighter; font-size:16px; margin-bottom:10px;}
+.shift-teamTel a{color:#333; text-decoration:none; font-size:16px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

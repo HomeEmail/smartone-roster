@@ -1,0 +1,95 @@
+/* CSS Document */
+.animated{-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-ms-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:0.4s;-moz-animation-duration:0.4s;-ms-animation-duration:0.4s;-o-animation-duration:0.4s;animation-duration:0.4s;}
+@-webkit-keyframes sildeLeft {
+    0% {
+		-webkit-transform: translateX(0%); /* Safari and Chrome */
+    }
+	100% {
+		-webkit-transform: translateX(80%); /* Safari and Chrome */
+    }
+}
+
+@-moz-keyframes sildeLeft {
+    0% {
+        -moz-transform: translateX(0%); /* Firefox */
+    }
+	100% {
+		-moz-transform: translateX(80%); /* Firefox */
+    }
+}
+
+@-o-keyframes sildeLeft {
+    0% {
+        -o-transform: translateX(0%); /* Opera */
+    }
+	100% {
+		-o-transform: translateX(80%); /* Opera */
+    }
+}
+
+@keyframes sildeLeft {
+    0% {
+        transform: translateX(0%);
+    }
+	100% {
+		transform: translateX(80%);
+    }
+}
+
+.sildeLeftToRight {
+	-webkit-animation-name: sildeLeft;
+	-webkit-backface-visibility: visible !important;
+	-moz-animation-name: sildeLeft;
+	-moz-backface-visibility: visible !important;
+	-o-animation-name: sildeLeft;
+	-o-backface-visibility: visible !important;
+	animation-name: sildeLeft;
+	backface-visibility: visible !important;
+}
+
+@-webkit-keyframes sildeLeftBack {
+    0% {
+		-webkit-transform: translateX(80%); /* Safari and Chrome */
+    }
+	100% {
+		-webkit-transform: translateX(0%); /* Safari and Chrome */
+    }
+}
+
+@-moz-keyframes sildeLeftBack {
+    0% {
+        -moz-transform: translateX(80%); /* Firefox */
+    }
+	100% {
+		-moz-transform: translateX(0%); /* Firefox */
+    }
+}
+
+@-o-keyframes sildeLeftBack {
+    0% {
+        -o-transform: translateX(80%); /* Opera */
+    }
+	100% {
+		-o-transform: translateX(0%); /* Opera */
+    }
+}
+
+@keyframes sildeLeftBack {
+    0% {
+        transform: translateX(80%);
+    }
+	100% {
+		transform: translateX(0%);
+    }
+}
+
+.sildeLeftToRightBack {
+	-webkit-animation-name: sildeLeftBack;
+	-webkit-backface-visibility: visible !important;
+	-moz-animation-name: sildeLeftBack;
+	-moz-backface-visibility: visible !important;
+	-o-animation-name: sildeLeftBack;
+	-o-backface-visibility: visible !important;
+	animation-name: sildeLeftBack;
+	backface-visibility: visible !important;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>get json</title>
+<script type="text/javascript" src="prototype1.7.1.js"></script>
+
+<script type="text/javascript">
+var common=common||{};// "如果common没有定义，那么设置它为一个空对象"
+common.base=common.base||{};//定義公共基本類
+
+common.base=(function(){
+	return{
+		fwt:function fwt(para){
+			document.write(para);
+		},
+		
+		fwl:function fwt(para){
+			document.writeln(para);	
+		},
+		init:function init(){
+			console.log('common lib init...');
+		}
+	}
+}());
+
+</script>
+
+</head>
+
+<body>
+<script type="text/javascript">
+var RS=RS||{};
+RS.App=RS.App||{};
+RS.App=(function(){
+	var wt=function wt(str){
+		document.write(str);
+	};
+	var wl=function wl(str){
+		document.writeln(str);
+	};
+	var getQueryString=function getQueryString(name){    
+		var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");   
+		var r = window.location.search.substr(1).match(reg);    
+		if (r != null) 
+			return unescape(r[2]); 
+		return null;    
+	};
+	var getFullMonth=function getFullMonth(monthStr){
+		var length=monthStr.toString().length;
+		if(length==1)
+			return '0'+monthStr.toString();
+		return monthStr.toString();
+	};
+	var dt='';//url para value(year month), default current;
+	var teams=new Array();
+	/*****get url para dt value**********/
+	var getdt=function getdt(){
+		dt=getQueryString('dt')||(new Date().getFullYear()).toString()+getFullMonth(new Date().getMonth()+1);
+		return dt;
+	};
+	/*****get month english shortcut**********/
+	var getMonthEn=function getMonthEn(month){
+		var m=new Array('Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec');
+		return m[month-1]||m[new Date().getMonth()];
+		
+	};
+	/*****get all team list*************/
+	var getTeams=function getTeams(){
+		new Ajax.Request('teams.json', { 
+			method: 'post',
+			onSuccess: function(tran) {
+				//alert(tran.responseJSON[0].tid+' '+tran.responseJSON.length);
+				teams=tran.responseJSON;
+				//var t=new Array();
+				//t.push(tran.responseJSON[0].tid);
+				//alert(teams[0].tid);
+				//alert(teams.length);
+			},
+			onFailure: function(tran) {
+				alert('oh! loading team error');	
+			}
+		});
+	};
+	
+	return{
+		init:function init(){
+			console.log('RS.App.init...');
+			console.log(getdt());
+			console.log(getMonthEn(9));
+			getTeams();	
+		}
+	}
+}());
+
+RS.App.init();
+
+</script>
+</body>
+</html>

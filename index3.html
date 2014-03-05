@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-touch-fullscreen" content="yes"/>
+<title>Smartone RosterSystem</title>
+<script src="prototype1.7.1.js"></script>
+<script src="effectPlus/scriptaculous.js"></script>
+<script src="iscroll.js"></script>
+<script src="rs.js"></script>
+
+<script type="text/javascript">
+
+</script>
+<style type="text/css" media="all">
+#initLoading{position:absolute; z-index:99999; background:#fff; opacity:0.98; width:100%; height:100%; line-height:100%; text-align:center; vertical-align:middle; color:#333; font-size:24px;}
+#initLoading span{position:absolute; top:50%;}
+</style>
+</head>
+
+<body id="body">
+<div id="initLoading"><span>loading...</span></div>
+<div id="header">
+	ST RosterSystem
+	<select id="teamFilter">
+    	<option value="-1">All Teams</option>
+        <option value="1">Web Team</option>
+        <option value="2">CO Team</option>
+        <option value="3">News Team</option>
+    </select>
+</div>
+<div id="content">
+    <ul id="teamList">
+        <li id="teamList-1">
+        	<table width="100%" border="0" cellpadding="0" cellspacing="0">
+            	<tbody>
+                	<tr>
+                    	<td colspan="2" valign="top" style="border-bottom:1px #ccc solid;">
+                        	<div class="shift">
+                            	<div style="text-align:center;">
+                                <span class="shift-teamName">Web Team <a href="tel:3333">3333</a> <a href="tel:5656">5656</a></span>
+                                <button class="button shift-bt" onClick="javascript:showShift(this)">&or;</button></div>
+                                <ul class="shift-list" style="display:none;">
+                                	<li>O: Odefdd dfdf </li>
+                                    <li>O: Odefdd dfdf </li>
+                                    <li>O: Odefdd dfdf </li>
+                                    <li>O: Odefdd dfdf </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                	<tr>
+                    	<td style="width:100px;" align="right" valign="top"> 
+                        	<div class="memberList">
+                                <div class="dutyDay" style="color:red;">Web Team<br/><a href="tel:3333">3333</a> <a href="tel:5656">5656</a></div>
+                                <div class="dutyStatus"><a href="tel:3323">Hugo</a></div>
+                                <div class="dutyStatus"><a href="tel:3323">Hugo</a></div>
+                                <div class="dutyStatus"><a href="tel:3323">Hugo</a></div>
+                                <div class="dutyStatus"><a href="tel:3323">Hugo</a></div>
+                                <div class="dutyStatus"><a href="tel:3323">Hugo</a></div>
+                                <div class="dutyStatus"><a href="tel:3323">Hugo</a></div>
+                                <div class="dutyStatus"><a href="tel:3323">Hugo</a></div>
+                                <div class="dutyStatus"><a href="tel:3323">Hugo</a></div>
+                                
+                                <div class="dutyDay" style="color:red;">Web Team<br/><a href="tel:3333">3333</a> <a href="tel:5656">5656</a></div>
+                                <div class="dutyStatus"><a href="tel:3323">Hugo</a></div>
+                                <div class="dutyStatus"><a href="tel:3323">Hugo</a></div>
+                                <div class="dutyStatus"><a href="tel:3323">Hugo</a></div>
+                                <div class="dutyStatus"><a href="tel:3323">Hugo</a></div>
+                                <div class="dutyStatus"><a href="tel:3323">Hugo</a></div>
+                                <div class="dutyStatus"><a href="tel:3323">Hugo</a></div>
+                                <div class="dutyStatus"><a href="tel:3323">Hugo</a></div>
+                                <div class="dutyStatus"><a href="tel:3323">Hugo</a></div>
+                            </div>
+                        </td>
+                        <td valign="top">
+                        	<div id="wrapper1" class="wrapper" style="height:610px;">
+                                <div class="scroller" style="width:480px;">
+                                    <ul class="dutyList">
+                                        <li>
+                                            <span class="dutyDay">Sta<br/>30</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            
+                                            <span class="dutyDay">Sta<br/>30</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+           	
+        </li>
+    	<li id="teamList-2">
+        	<table width="100%" border="0" cellpadding="0" cellspacing="0">
+            	<tbody>
+                    <tr>
+                    	<td colspan="2" valign="top" style="border-bottom:1px #ccc solid;">
+                        	<div class="shift">
+                            	<div style="text-align:center;">
+                                <span class="shift-teamName">CO Team <a href="tel:3333">3333</a> <a href="tel:5656">5656</a></span>
+                                <button class="button shift-bt" onClick="javascript:showShift(this)">&or;</button></div>
+                                <ul class="shift-list" style="display:none;">
+                                	<li>O: Odefdd dfdf </li>
+                                    <li>O: Odefdd dfdf </li>
+                                    <li>O: Odefdd dfdf </li>
+                                    <li>O: Odefdd dfdf </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                	<tr>
+                    	<td style="width:100px;" align="right" valign="top"> 
+                        	<div class="memberList">
+                                <div class="dutyDay" style="color:red;">CO Team<br/><a href="tel:3333">3333</a> <a href="tel:5656">5656</a></div>
+                                <div class="dutyStatus"><a href="tel:3323">Hugo</a></div>
+                                <div class="dutyStatus"><a href="tel:3323">Hugo</a></div>
+                                <div class="dutyStatus"><a href="tel:3323">Hugo</a></div>
+                                <div class="dutyStatus"><a href="tel:3323">Hugo</a></div>
+                                <div class="dutyStatus"><a href="tel:3323">Hugo</a></div>
+                                <div class="dutyStatus"><a href="tel:3323">Hugo</a></div>
+                                <div class="dutyStatus"><a href="tel:3323">Hugo</a></div>
+                                <div class="dutyStatus"><a href="tel:3323">Hugo</a></div>
+                            </div>
+                        </td>
+                        <td valign="top">
+                        	<div id="wrapper2" class="wrapper" style="height:310px;">
+                                <div class="scroller" style="width:480px;">
+                                    <ul class="dutyList">
+                                        <li>
+                                            <span class="dutyDay">Sta<br/>30</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                            <span class="dutyStatus">-</span>
+                                            <span class="dutyStatus">O</span>
+                                            <span class="dutyStatus">R</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+           	
+        </li>
+    </ul>
+</div>
+<div id="footer">
+	<a href="?dt=201305"> << </a>
+    <span>July 2013</span>
+    <a href="?dt=201307"> >> </a>
+</div>
+</body>
+<script>
+function includeLinkStyle(url) {
+	var link = document.createElement("link");
+	link.rel = "stylesheet";
+	link.type = "text/css";
+	link.href = url;
+	document.getElementsByTagName("head")[0].appendChild(link);
+}
+includeLinkStyle("css.css");
+
+/*var content;
+//var myScroll1;
+//var myScroll2;
+function loaded() {
+	content=new iScroll('content',{
+		hScroll: false, //是否水平滚动
+		vScroll: true, //是否垂直滚动
+		x: 0, //滚动水平初始位置
+		y: 0, //滚动垂直初始位置
+		bounce: true, //是否超过实际位置反弹
+		bounceLock: false, //当内容少于滚动是否可以反弹，这个实际用处不大
+		momentum: true, //动量效果，拖动惯性
+		lockDirection: true,
+		//当水平滚动和垂直滚动同时生效时，当拖动开始是否锁定另一边的拖动
+		useTransform: true, //是否使用CSS形变
+		useTransition: false, //是否使用CSS变换
+		topOffset: 0, //已经滚动的基准值(一般情况用不到)
+		checkDOMChanges: true, //是否自动检测内容变化  	
+	}); 
+	//myScroll1 = new iScroll('wrapper1');
+	//myScroll2 = new iScroll('wrapper2');
+	
+}*/
+
+RS.App.init();
+
+//document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+/* * * * * * * *
+ *
+ * Use this for high compatibility (iDevice + Android)
+ *
+ */
+//document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 200); }, false);
+/*
+ * * * * * * * */	
+
+//aq='ss';
+//var aaaa='var myScroll3="'+aq+'";alert(myScroll3);';
+//document.write('<script>'+aaaa+'<\/script>');
+
+function showShift(ele){
+	//$(ele).up(0).next(0).setStyle({'display':'block'});	
+	$(ele).up(0).next(0).toggle();
+}
+
+$('teamFilter').observe('change',function(event){
+	var teamid=Event.element(event).value;
+	if(teamid==-1){
+		$$('ul#teamList > li').each(function(e){
+			$(e).show();	
+		});
+		return;
+	}
+	var objSelect=document.getElementById('teamFilter');
+	if($('teamList-'+teamid)==''||$('teamList-'+teamid)==null||$('teamList-'+teamid)=='undefined'){
+		alert('無 '+objSelect.options[objSelect.selectedIndex].text +' 的相關信息');
+		return;	
+	}
+	
+	$$('ul#teamList > li').each(function(e){
+		$(e).hide();	
+	});
+	$('teamList-'+teamid).show();
+});
+	
+</script>
+<script id="jsStr">
+
+</script>
+</html>

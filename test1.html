@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style>
+table.tbl{border-collapse:collapse;}
+table.tbl td,table.tbl th{border:1px #000 solid; padding:5px;}
+</style>
+
+</head>
+
+<body>
+<script>
+/***日期是否相等*****/
+/*var t1=new Date('2013/8/15');
+alert(t1.toDateString());
+var t2=new Date();
+alert(t2.toDateString());
+alert(t1.toDateString()==t2.toDateString());*/
+function isEqualDate(date1,date2){
+	return date1.toDateString()==date2.toDateString();	
+}
+
+
+		
+</script>
+<p>Smartone Roster System,2,3,4,5</p>
+<table class="tbl">
+	<thead>
+    	<tr><th>aa</th><th>aad</th></tr>
+    </thead>
+    <tbody>
+    	<tr><td>dfdf</td><td>dfldfj</td></tr>
+    </tbody>
+</table>
+<br/>
+<script>
+/********parseInt 08 09 bug*********************************
+function getdt(){
+	name='dt';
+	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");  
+	var s='?dt=201308'; 
+	var r=s.substr(1).match(reg);  
+	//console.log(r);
+	//console.log(unescape(r[2]));
+	return unescape(r[2]);
+	//r='?dt=201307'.substr(1).match(reg);
+	//console.log(r);
+	//console.log(unescape(r[2]));
+}
+console.log(getdt());
+var monthPara=parseInt(getdt().substring(4),10);
+console.log(getdt().substr(4,2));
+document.write(parseInt('08',10));
+document.write('<br/>');
+document.write(parseInt('08'));
+console.log(monthPara);
+var yearPara=parseInt(getdt().substring(0,4),10);
+console.log(yearPara);
+****************************/
+
+</script>
+
+</body>
+</html>
